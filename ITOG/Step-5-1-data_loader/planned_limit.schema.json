@@ -1,0 +1,79 @@
+{
+  "id": 259662,
+  "num_rows": 50,
+  "file_format": "sql",
+  "name": "planned_limit",
+  "table_name": "planned_limit",
+  "include_create_sql": false,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": ""
+    },
+    {
+      "name": "price_id",
+      "null_percentage": 0,
+      "type": "Number",
+      "min": 1,
+      "max": 2000,
+      "decimals": 0,
+      "formula": ""
+    },
+    {
+      "name": "change_at",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "9/19/2015",
+      "max": "9/19/2020",
+      "format": "%Y-%m-%d",
+      "formula": ""
+    },
+    {
+      "name": "limit_current",
+      "null_percentage": 0,
+      "type": "Number",
+      "min": 2,
+      "max": 100,
+      "decimals": 0,
+      "formula": "round(this, 0)"
+    },
+    {
+      "name": "limit_min",
+      "null_percentage": 70,
+      "type": "Number",
+      "min": 0,
+      "max": 15,
+      "decimals": 0,
+      "formula": ""
+    },
+    {
+      "name": "done",
+      "null_percentage": 0,
+      "type": "Number",
+      "min": 1,
+      "max": 1,
+      "decimals": 0,
+      "formula": ""
+    },
+    {
+      "name": "created_at",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "9/19/2015",
+      "max": "9/19/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": "change_at - days(2)"
+    },
+    {
+      "name": "updated_at",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "9/19/2015",
+      "max": "9/19/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": "if this < created_at then created_at end"
+    }
+  ]
+}

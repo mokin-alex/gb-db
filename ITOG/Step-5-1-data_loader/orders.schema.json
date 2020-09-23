@@ -1,0 +1,64 @@
+{
+  "id": 259666,
+  "num_rows": 1000,
+  "file_format": "sql",
+  "name": "orders",
+  "table_name": "orders",
+  "include_create_sql": false,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": ""
+    },
+    {
+      "name": "user_id",
+      "null_percentage": 0,
+      "type": "Number",
+      "min": 1,
+      "max": 100,
+      "decimals": 0,
+      "formula": ""
+    },
+    {
+      "name": "order_number",
+      "null_percentage": 0,
+      "type": "Digit Sequence",
+      "format": "^^^#######",
+      "formula": ""
+    },
+    {
+      "name": "status",
+      "null_percentage": 0,
+      "type": "Custom List",
+      "values": [
+        "new",
+        "cancelled",
+        "paid",
+        "delivered"
+      ],
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": ""
+    },
+    {
+      "name": "created_at",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "9/20/2011",
+      "max": "9/20/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": ""
+    },
+    {
+      "name": "updated_at",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "9/20/2011",
+      "max": "9/20/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": "if this < created_at then created_at+day(2) end"
+    }
+  ]
+}

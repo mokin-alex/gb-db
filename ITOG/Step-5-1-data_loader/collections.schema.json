@@ -1,0 +1,126 @@
+{
+  "id": 259608,
+  "num_rows": 1000,
+  "file_format": "sql",
+  "name": "collections",
+  "table_name": "collections",
+  "include_create_sql": false,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": ""
+    },
+    {
+      "name": "type",
+      "null_percentage": 0,
+      "type": "Custom List",
+      "values": [
+        "Books",
+        "Contact Sheet Prints",
+        "Fine Prints",
+        "Posters",
+        "Objects"
+      ],
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": ""
+    },
+    {
+      "name": "tags",
+      "null_percentage": 70,
+      "type": "Custom List",
+      "values": [
+        "Contemporary Posters",
+        "Vintage Posters",
+        "Rare Books",
+        "Books with Prints"
+      ],
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": ""
+    },
+    {
+      "name": "name",
+      "null_percentage": 0,
+      "type": "Words",
+      "min": 2,
+      "max": 7,
+      "formula": ""
+    },
+    {
+      "name": "author",
+      "null_percentage": 0,
+      "type": "Number",
+      "min": 1,
+      "max": 95,
+      "decimals": 0,
+      "formula": ""
+    },
+    {
+      "name": "description",
+      "null_percentage": 0,
+      "type": "Sentences",
+      "min": 1,
+      "max": 20,
+      "formula": ""
+    },
+    {
+      "name": "special",
+      "null_percentage": 60,
+      "type": "Sentences",
+      "min": 1,
+      "max": 3,
+      "formula": ""
+    },
+    {
+      "name": "edition",
+      "null_percentage": 30,
+      "type": "Custom List",
+      "values": [
+        "Limited edition",
+        "Open edition"
+      ],
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": ""
+    },
+    {
+      "name": "magnum_edition",
+      "null_percentage": 65,
+      "type": "Boolean",
+      "formula": ""
+    },
+    {
+      "name": "signed",
+      "null_percentage": 50,
+      "type": "Custom List",
+      "values": [
+        "Signed",
+        "Estate Stamped"
+      ],
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": ""
+    },
+    {
+      "name": "created_at",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "9/19/2010",
+      "max": "9/19/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": ""
+    },
+    {
+      "name": "updated_at",
+      "null_percentage": 70,
+      "type": "Datetime",
+      "min": "9/19/2010",
+      "max": "9/19/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": "if this < created_at then created_at end"
+    }
+  ]
+}
