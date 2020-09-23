@@ -1,0 +1,87 @@
+{
+  "id": 259599,
+  "num_rows": 1000,
+  "file_format": "sql",
+  "name": "photos",
+  "table_name": "photos",
+  "include_create_sql": false,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": ""
+    },
+    {
+      "name": "profile_id",
+      "null_percentage": 0,
+      "type": "Number",
+      "min": 1,
+      "max": 95,
+      "decimals": 0,
+      "formula": ""
+    },
+    {
+      "name": "filename",
+      "null_percentage": 0,
+      "type": "Character Sequence",
+      "format": "@@@########",
+      "formula": ""
+    },
+    {
+      "name": "url",
+      "null_percentage": 0,
+      "type": "Dummy Image URL",
+      "minHeight": 706,
+      "maxHeight": 536,
+      "minWidth": 1054,
+      "maxWidth": 808,
+      "format": "jpg",
+      "formula": ""
+    },
+    {
+      "name": "title",
+      "null_percentage": 0,
+      "type": "Sentences",
+      "min": 1,
+      "max": 1,
+      "formula": ""
+    },
+    {
+      "name": "place",
+      "null_percentage": 0,
+      "type": "Country",
+      "countries": [
+
+      ],
+      "formula": ""
+    },
+    {
+      "name": "year",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "01/01/1930",
+      "max": "09/01/2020",
+      "format": "%Y-%m-%d",
+      "formula": ""
+    },
+    {
+      "name": "created_at",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "9/19/2010",
+      "max": "9/19/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": ""
+    },
+    {
+      "name": "updated_at",
+      "null_percentage": 50,
+      "type": "Datetime",
+      "min": "9/19/2019",
+      "max": "9/19/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": "if this < created_at then created_at end"
+    }
+  ]
+}

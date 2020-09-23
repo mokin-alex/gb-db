@@ -1,0 +1,113 @@
+{
+  "id": 259597,
+  "num_rows": 95,
+  "file_format": "sql",
+  "name": "photographers",
+  "table_name": "photographers",
+  "include_create_sql": false,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": ""
+    },
+    {
+      "name": "name",
+      "null_percentage": 0,
+      "type": "Dataset Column",
+      "dataset": "photographers",
+      "column": null,
+      "selectionStyle": "sequential",
+      "formula": ""
+    },
+    {
+      "name": "birthday",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "01/1/1946",
+      "max": "12/31/1990",
+      "format": "%Y-%m-%d",
+      "formula": ""
+    },
+    {
+      "name": "native",
+      "null_percentage": 0,
+      "type": "Race",
+      "formula": ""
+    },
+    {
+      "name": "based_in",
+      "null_percentage": 0,
+      "type": "City",
+      "formula": ""
+    },
+    {
+      "name": "bio",
+      "null_percentage": 0,
+      "type": "Paragraphs",
+      "min": 1,
+      "max": 5,
+      "formula": ""
+    },
+    {
+      "name": "quote",
+      "null_percentage": 20,
+      "type": "Slogan",
+      "formula": ""
+    },
+    {
+      "name": "status",
+      "null_percentage": 0,
+      "type": "Custom List",
+      "values": [
+        "Member",
+        "Contributer"
+      ],
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": ""
+    },
+    {
+      "name": "works",
+      "null_percentage": 0,
+      "type": "Boolean",
+      "formula": ""
+    },
+    {
+      "name": "died_at",
+      "null_percentage": 85,
+      "type": "Datetime",
+      "min": "9/19/1980",
+      "max": "12/30/2010",
+      "format": "%Y-%m-%d",
+      "formula": ""
+    },
+    {
+      "name": "userpic",
+      "null_percentage": 5,
+      "type": "Avatar",
+      "height": 50,
+      "width": 50,
+      "formula": ""
+    },
+    {
+      "name": "created_at",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "9/19/2000",
+      "max": "09/01/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": ""
+    },
+    {
+      "name": "updated_at",
+      "null_percentage": 50,
+      "type": "Datetime",
+      "min": "9/19/2000",
+      "max": "09/01/2020",
+      "format": "%Y-%m-%d %H:%M:%S",
+      "formula": "if this < created_at then created_at end"
+    }
+  ]
+}
